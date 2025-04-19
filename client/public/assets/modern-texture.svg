@@ -1,0 +1,93 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+  <filter id="noise">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+    <feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 0.4 0"/>
+  </filter>
+  <rect width="500" height="500" filter="url(#noise)" opacity="0.2"/>
+  <g opacity="0.08">
+    <!-- Modern era patterns: digital, circuit-like patterns -->
+    
+    <!-- Circuit pattern -->
+    <g stroke="#0D47A1" stroke-width="1" fill="none">
+      <path d="M50,100 L250,100 L250,200 L350,200 L350,300 L150,300 L150,400 L450,400" />
+      <path d="M100,50 L100,150 L200,150 L200,250 L300,250 L300,350 L400,350 L400,450" />
+      <circle cx="100" cy="100" r="5" fill="#2196F3" />
+      <circle cx="250" cy="100" r="5" fill="#2196F3" />
+      <circle cx="250" cy="200" r="5" fill="#2196F3" />
+      <circle cx="350" cy="200" r="5" fill="#2196F3" />
+      <circle cx="350" cy="300" r="5" fill="#2196F3" />
+      <circle cx="150" cy="300" r="5" fill="#2196F3" />
+      <circle cx="150" cy="400" r="5" fill="#2196F3" />
+      <circle cx="100" cy="150" r="5" fill="#2196F3" />
+      <circle cx="200" cy="150" r="5" fill="#2196F3" />
+      <circle cx="200" cy="250" r="5" fill="#2196F3" />
+      <circle cx="300" cy="250" r="5" fill="#2196F3" />
+      <circle cx="300" cy="350" r="5" fill="#2196F3" />
+      <circle cx="400" cy="350" r="5" fill="#2196F3" />
+    </g>
+    
+    <!-- Digital grid -->
+    <g stroke="#0D47A1" stroke-width="0.5" opacity="0.3">
+      <line x1="0" y1="0" x2="500" y2="0" />
+      <line x1="0" y1="50" x2="500" y2="50" />
+      <line x1="0" y1="100" x2="500" y2="100" />
+      <line x1="0" y1="150" x2="500" y2="150" />
+      <line x1="0" y1="200" x2="500" y2="200" />
+      <line x1="0" y1="250" x2="500" y2="250" />
+      <line x1="0" y1="300" x2="500" y2="300" />
+      <line x1="0" y1="350" x2="500" y2="350" />
+      <line x1="0" y1="400" x2="500" y2="400" />
+      <line x1="0" y1="450" x2="500" y2="450" />
+      <line x1="0" y1="500" x2="500" y2="500" />
+      
+      <line x1="0" y1="0" x2="0" y2="500" />
+      <line x1="50" y1="0" x2="50" y2="500" />
+      <line x1="100" y1="0" x2="100" y2="500" />
+      <line x1="150" y1="0" x2="150" y2="500" />
+      <line x1="200" y1="0" x2="200" y2="500" />
+      <line x1="250" y1="0" x2="250" y2="500" />
+      <line x1="300" y1="0" x2="300" y2="500" />
+      <line x1="350" y1="0" x2="350" y2="500" />
+      <line x1="400" y1="0" x2="400" y2="500" />
+      <line x1="450" y1="0" x2="450" y2="500" />
+      <line x1="500" y1="0" x2="500" y2="500" />
+    </g>
+    
+    <!-- Binary code-like patterns -->
+    <g fill="#2196F3" opacity="0.2" font-family="monospace" font-size="12">
+      <text x="75" y="75">010101</text>
+      <text x="175" y="175">101010</text>
+      <text x="275" y="275">010101</text>
+      <text x="375" y="375">101010</text>
+      <text x="125" y="125">101010</text>
+      <text x="225" y="225">010101</text>
+      <text x="325" y="325">101010</text>
+      <text x="425" y="425">010101</text>
+    </g>
+    
+    <!-- Network node pattern -->
+    <g stroke="#0D47A1" fill="#2196F3" opacity="0.4">
+      <circle cx="250" cy="250" r="50" fill="none" stroke-width="1"/>
+      <circle cx="250" cy="250" r="5"/>
+      
+      <circle cx="100" cy="100" r="3"/>
+      <circle cx="400" cy="100" r="3"/>
+      <circle cx="100" cy="400" r="3"/>
+      <circle cx="400" cy="400" r="3"/>
+      
+      <circle cx="300" cy="150" r="3"/>
+      <circle cx="150" cy="300" r="3"/>
+      <circle cx="300" cy="350" r="3"/>
+      <circle cx="350" cy="300" r="3"/>
+      
+      <line x1="250" y1="250" x2="100" y2="100" stroke-width="0.5"/>
+      <line x1="250" y1="250" x2="400" y2="100" stroke-width="0.5"/>
+      <line x1="250" y1="250" x2="100" y2="400" stroke-width="0.5"/>
+      <line x1="250" y1="250" x2="400" y2="400" stroke-width="0.5"/>
+      <line x1="250" y1="250" x2="300" y2="150" stroke-width="0.5"/>
+      <line x1="250" y1="250" x2="150" y2="300" stroke-width="0.5"/>
+      <line x1="250" y1="250" x2="300" y2="350" stroke-width="0.5"/>
+      <line x1="250" y1="250" x2="350" y2="300" stroke-width="0.5"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,44 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+  <filter id="noise">
+    <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch"/>
+    <feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 0.6 0"/>
+  </filter>
+  <rect width="500" height="500" filter="url(#noise)" opacity="0.3"/>
+  <g opacity="0.08">
+    <!-- Renaissance style patterns: geometric, botanical, and flowing designs -->
+    <circle cx="250" cy="250" r="200" fill="none" stroke="#1B5E20" stroke-width="2"/>
+    <!-- Golden ratio spiral -->
+    <path d="M250,250 C270,230 290,230 310,250 C330,270 330,290 310,310 C290,330 270,330 250,310 C230,290 230,270 250,250" 
+          fill="none" stroke="#43A047" stroke-width="1.5" transform="rotate(0, 250, 250)"/>
+    <path d="M250,250 C270,230 290,230 310,250 C330,270 330,290 310,310 C290,330 270,330 250,310 C230,290 230,270 250,250" 
+          fill="none" stroke="#43A047" stroke-width="1.5" transform="rotate(90, 250, 250)"/>
+    <path d="M250,250 C270,230 290,230 310,250 C330,270 330,290 310,310 C290,330 270,330 250,310 C230,290 230,270 250,250" 
+          fill="none" stroke="#43A047" stroke-width="1.5" transform="rotate(180, 250, 250)"/>
+    <path d="M250,250 C270,230 290,230 310,250 C330,270 330,290 310,310 C290,330 270,330 250,310 C230,290 230,270 250,250" 
+          fill="none" stroke="#43A047" stroke-width="1.5" transform="rotate(270, 250, 250)"/>
+    <!-- Botanical elements -->
+    <g opacity="0.2">
+      <path d="M150,150 C160,140 170,140 180,150 C190,160 190,170 180,180 C170,190 160,190 150,180 C140,170 140,160 150,150" 
+            fill="#1B5E20"/>
+      <path d="M350,150 C360,140 370,140 380,150 C390,160 390,170 380,180 C370,190 360,190 350,180 C340,170 340,160 350,150" 
+            fill="#1B5E20"/>
+      <path d="M150,350 C160,340 170,340 180,350 C190,360 190,370 180,380 C170,390 160,390 150,380 C140,370 140,360 150,350" 
+            fill="#1B5E20"/>
+      <path d="M350,350 C360,340 370,340 380,350 C390,360 390,370 380,380 C370,390 360,390 350,380 C340,370 340,360 350,350" 
+            fill="#1B5E20"/>
+    </g>
+    <!-- Grid pattern inspired by perspective studies -->
+    <g stroke="#43A047" stroke-width="0.5" opacity="0.15">
+      <path d="M150,150 L350,150"/>
+      <path d="M150,200 L350,200"/>
+      <path d="M150,250 L350,250"/>
+      <path d="M150,300 L350,300"/>
+      <path d="M150,350 L350,350"/>
+      <path d="M150,150 L150,350"/>
+      <path d="M200,150 L200,350"/>
+      <path d="M250,150 L250,350"/>
+      <path d="M300,150 L300,350"/>
+      <path d="M350,150 L350,350"/>
+    </g>
+  </g>
+</svg>

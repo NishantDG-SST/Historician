@@ -1,0 +1,80 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+  <filter id="noise">
+    <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
+    <feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 0.5 0"/>
+  </filter>
+  <rect width="500" height="500" filter="url(#noise)" opacity="0.3"/>
+  <g opacity="0.1">
+    <!-- Industrial Revolution patterns: gears, machinery, patterns -->
+    <!-- Main gear -->
+    <circle cx="250" cy="250" r="100" fill="none" stroke="#424242" stroke-width="3"/>
+    <circle cx="250" cy="250" r="90" fill="none" stroke="#424242" stroke-width="2"/>
+    <circle cx="250" cy="250" r="20" fill="#757575"/>
+    
+    <!-- Gear teeth -->
+    <g fill="#424242">
+      <rect x="245" y="150" width="10" height="25"/>
+      <rect x="245" y="325" width="10" height="25"/>
+      <rect x="150" y="245" width="25" height="10"/>
+      <rect x="325" y="245" width="25" height="10"/>
+      
+      <!-- Diagonal teeth -->
+      <rect x="182" y="182" width="20" height="10" transform="rotate(45, 192, 187)"/>
+      <rect x="302" y="182" width="20" height="10" transform="rotate(-45, 302, 187)"/>
+      <rect x="182" y="302" width="20" height="10" transform="rotate(-45, 192, 307)"/>
+      <rect x="302" y="302" width="20" height="10" transform="rotate(45, 302, 307)"/>
+    </g>
+    
+    <!-- Smaller gears -->
+    <g>
+      <circle cx="150" cy="150" r="40" fill="none" stroke="#757575" stroke-width="2"/>
+      <circle cx="150" cy="150" r="10" fill="#757575"/>
+      <g stroke="#757575" stroke-width="2">
+        <line x1="150" y1="110" x2="150" y2="120"/>
+        <line x1="150" y1="180" x2="150" y2="190"/>
+        <line x1="110" y1="150" x2="120" y2="150"/>
+        <line x1="180" y1="150" x2="190" y2="150"/>
+        <line x1="125" y1="125" x2="135" y2="135"/>
+        <line x1="165" y1="165" x2="175" y2="175"/>
+        <line x1="125" y1="175" x2="135" y2="165"/>
+        <line x1="165" y1="135" x2="175" y2="125"/>
+      </g>
+    </g>
+    
+    <g>
+      <circle cx="350" cy="350" r="40" fill="none" stroke="#757575" stroke-width="2"/>
+      <circle cx="350" cy="350" r="10" fill="#757575"/>
+      <g stroke="#757575" stroke-width="2">
+        <line x1="350" y1="310" x2="350" y2="320"/>
+        <line x1="350" y1="380" x2="350" y2="390"/>
+        <line x1="310" y1="350" x2="320" y2="350"/>
+        <line x1="380" y1="350" x2="390" y2="350"/>
+        <line x1="325" y1="325" x2="335" y2="335"/>
+        <line x1="365" y1="365" x2="375" y2="375"/>
+        <line x1="325" y1="375" x2="335" y2="365"/>
+        <line x1="365" y1="335" x2="375" y2="325"/>
+      </g>
+    </g>
+    
+    <!-- Connecting rods -->
+    <line x1="190" y1="190" x2="225" y2="225" stroke="#424242" stroke-width="4"/>
+    <line x1="310" y1="310" x2="275" y2="275" stroke="#424242" stroke-width="4"/>
+    
+    <!-- Industrial grid pattern -->
+    <g stroke="#424242" stroke-width="0.5" opacity="0.3">
+      <path d="M50,50 L450,50" stroke-dasharray="2,2"/>
+      <path d="M50,100 L450,100" stroke-dasharray="2,2"/>
+      <path d="M50,200 L450,200" stroke-dasharray="2,2"/>
+      <path d="M50,300 L450,300" stroke-dasharray="2,2"/>
+      <path d="M50,400 L450,400" stroke-dasharray="2,2"/>
+      <path d="M50,450 L450,450" stroke-dasharray="2,2"/>
+      
+      <path d="M50,50 L50,450" stroke-dasharray="2,2"/>
+      <path d="M100,50 L100,450" stroke-dasharray="2,2"/>
+      <path d="M200,50 L200,450" stroke-dasharray="2,2"/>
+      <path d="M300,50 L300,450" stroke-dasharray="2,2"/>
+      <path d="M400,50 L400,450" stroke-dasharray="2,2"/>
+      <path d="M450,50 L450,450" stroke-dasharray="2,2"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Custom Font Classes */
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-baskerville {
+  font-family: 'Libre Baskerville', serif;
+}
+
+/* Custom Colors */
+:root {
+  --color-timeNavy: #0e1222;
+  --color-parchment: #f8f0e3;
+  --color-brass: #d6bd7b;
+  
+  --color-medieval-primary: #5D4037;
+  --color-medieval-accent: #8D6E63;
+  --color-renaissance-primary: #1B5E20;
+  --color-renaissance-accent: #43A047;
+  --color-industrial-primary: #424242;
+  --color-industrial-accent: #757575;
+  --color-modern-primary: #0D47A1;
+  --color-modern-accent: #2196F3;
+  --color-future-primary: #311B92;
+  --color-future-accent: #7C4DFF;
+}
+
+/* Custom Tailwind Classes */
+@layer components {
+  .bg-timeNavy {
+    background-color: var(--color-timeNavy);
+  }
+  
+  .text-timeNavy {
+    color: var(--color-timeNavy);
+  }
+  
+  .bg-parchment {
+    background-color: var(--color-parchment);
+  }
+  
+  .text-parchment {
+    color: var(--color-parchment);
+  }
+  
+  .text-brass {
+    color: var(--color-brass);
+  }
+  
+  .border-brass {
+    border-color: var(--color-brass);
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .frame-border {
+    border: 1px solid rgba(214, 189, 123, 0.4);
+    border-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(4px);
+  }
+  
+  .period-transition {
+    transition: background 0.6s ease;
+  }
+  
+  /* Period-specific themes */
+  .medieval-theme {
+    background: radial-gradient(circle at center, rgba(93, 64, 55, 0.4) 0%, var(--color-timeNavy) 100%),
+    url('/assets/medieval-texture.svg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  .renaissance-theme {
+    background: radial-gradient(circle at center, rgba(27, 94, 32, 0.4) 0%, var(--color-timeNavy) 100%),
+    url('/assets/renaissance-texture.svg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  .industrial-theme {
+    background: radial-gradient(circle at center, rgba(66, 66, 66, 0.4) 0%, var(--color-timeNavy) 100%),
+    url('/assets/industrial-texture.svg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  .modern-theme {
+    background: radial-gradient(circle at center, rgba(13, 71, 161, 0.4) 0%, var(--color-timeNavy) 100%),
+    url('/assets/modern-texture.svg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  .future-theme {
+    background: radial-gradient(circle at center, rgba(49, 27, 146, 0.4) 0%, var(--color-timeNavy) 100%),
+    url('/assets/future-texture.svg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  /* Audio player animation */
+  .audio-visualizer {
+    display: flex;
+    align-items: flex-end;
+    height: 1.5rem;
+    gap: 3px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .audio-bar {
+    width: 3px;
+    height: 4px;
+    background-color: var(--color-brass);
+    border-radius: 2px;
+  }
+  
+  @keyframes audio-wave {
+    0% { height: 3px; }
+    50% { height: 16px; }
+    100% { height: 3px; }
+  }
+  
+  .animate-audio-wave {
+    animation: audio-wave 1.2s ease-in-out infinite;
+  }
+  
+  .choice-card:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Medieval theme color utilities */
+.bg-medieval-primary {
+  background-color: var(--color-medieval-primary);
+}
+
+.bg-medieval-accent {
+  background-color: var(--color-medieval-accent);
+}
+
+.text-medieval-primary {
+  color: var(--color-medieval-primary);
+}
+
+.text-medieval-accent {
+  color: var(--color-medieval-accent);
+}
+
+/* Renaissance theme color utilities */
+.bg-renaissance-primary {
+  background-color: var(--color-renaissance-primary);
+}
+
+.bg-renaissance-accent {
+  background-color: var(--color-renaissance-accent);
+}
+
+.text-renaissance-primary {
+  color: var(--color-renaissance-primary);
+}
+
+.text-renaissance-accent {
+  color: var(--color-renaissance-accent);
+}
+
+/* Industrial theme color utilities */
+.bg-industrial-primary {
+  background-color: var(--color-industrial-primary);
+}
+
+.bg-industrial-accent {
+  background-color: var(--color-industrial-accent);
+}
+
+.text-industrial-primary {
+  color: var(--color-industrial-primary);
+}
+
+.text-industrial-accent {
+  color: var(--color-industrial-accent);
+}
+
+/* Modern theme color utilities */
+.bg-modern-primary {
+  background-color: var(--color-modern-primary);
+}
+
+.bg-modern-accent {
+  background-color: var(--color-modern-accent);
+}
+
+.text-modern-primary {
+  color: var(--color-modern-primary);
+}
+
+.text-modern-accent {
+  color: var(--color-modern-accent);
+}
+
+/* Future theme color utilities */
+.bg-future-primary {
+  background-color: var(--color-future-primary);
+}
+
+.bg-future-accent {
+  background-color: var(--color-future-accent);
+}
+
+.text-future-primary {
+  color: var(--color-future-primary);
+}
+
+.text-future-accent {
+  color: var(--color-future-accent);
+}

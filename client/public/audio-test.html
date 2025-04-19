@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Audio Test Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .audio-container {
+      margin: 20px 0;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    h2 {
+      margin-top: 0;
+    }
+    button {
+      margin: 5px;
+      padding: 8px 16px;
+      background: #0066ff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0055dd;
+    }
+  </style>
+</head>
+<body>
+  <h1>Time Traveler Audio Test</h1>
+  <p>This page tests the audio files for the Time Traveler application.</p>
+  
+  <div class="audio-container">
+    <h2>Medieval Theme</h2>
+    <audio id="medieval-audio" controls src="/audio/medieval-theme.mp3"></audio>
+    <div>
+      <button onclick="document.getElementById('medieval-audio').play()">Play</button>
+      <button onclick="document.getElementById('medieval-audio').pause()">Pause</button>
+    </div>
+  </div>
+  
+  <div class="audio-container">
+    <h2>Renaissance Theme</h2>
+    <audio id="renaissance-audio" controls src="/audio/renaissance-theme.mp3"></audio>
+    <div>
+      <button onclick="document.getElementById('renaissance-audio').play()">Play</button>
+      <button onclick="document.getElementById('renaissance-audio').pause()">Pause</button>
+    </div>
+  </div>
+  
+  <div class="audio-container">
+    <h2>Industrial Theme</h2>
+    <audio id="industrial-audio" controls src="/audio/industrial-theme.mp3"></audio>
+    <div>
+      <button onclick="document.getElementById('industrial-audio').play()">Play</button>
+      <button onclick="document.getElementById('industrial-audio').pause()">Pause</button>
+    </div>
+  </div>
+  
+  <div class="audio-container">
+    <h2>Modern Theme</h2>
+    <audio id="modern-audio" controls src="/audio/modern-theme.mp3"></audio>
+    <div>
+      <button onclick="document.getElementById('modern-audio').play()">Play</button>
+      <button onclick="document.getElementById('modern-audio').pause()">Pause</button>
+    </div>
+  </div>
+  
+  <div class="audio-container">
+    <h2>Future Theme</h2>
+    <audio id="future-audio" controls src="/audio/future-theme.mp3"></audio>
+    <div>
+      <button onclick="document.getElementById('future-audio').play()">Play</button>
+      <button onclick="document.getElementById('future-audio').pause()">Pause</button>
+    </div>
+  </div>
+  
+  <script>
+    // Test loading status for each audio element
+    const audioElements = document.querySelectorAll('audio');
+    
+    audioElements.forEach(audio => {
+      audio.addEventListener('canplaythrough', () => {
+        console.log(`${audio.id} loaded successfully and can play through`);
+      });
+      
+      audio.addEventListener('error', (e) => {
+        console.error(`Error loading ${audio.id}:`, e);
+      });
+    });
+  </script>
+</body>
+</html>
